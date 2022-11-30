@@ -1,7 +1,6 @@
 package com.example.guessnumber
 
 import android.widget.Toast
-import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardActions
@@ -12,7 +11,6 @@ import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.text.font.FontWeight
@@ -114,7 +112,7 @@ fun ResultDialog(viewModel: GuessNumberViewModel = koinViewModel()) {
 @Composable
 fun ErrorCard(viewModel: GuessNumberViewModel = koinViewModel()) {
     val onDismiss = { viewModel.onShowDialogChange() }
-    Card(modifier = Modifier.padding(20.dp), border = BorderStroke(2.dp, Color.Red)) {
+    Card(modifier = Modifier.padding(20.dp), elevation = 5.dp) {
         Column(
             modifier = Modifier.padding(20.dp),
             verticalArrangement = Arrangement.spacedBy(10.dp),
@@ -138,7 +136,7 @@ fun ErrorCard(viewModel: GuessNumberViewModel = koinViewModel()) {
 @Composable
 fun SuccessCard(viewModel: GuessNumberViewModel = koinViewModel()) {
     val onDismiss = { viewModel.onShowDialogChange() }
-    Card(modifier = Modifier.padding(20.dp), border = BorderStroke(2.dp, Color.Red)) {
+    Card(modifier = Modifier.padding(20.dp), elevation = 5.dp) {
         Column(
             modifier = Modifier.padding(20.dp),
             verticalArrangement = Arrangement.spacedBy(10.dp),
