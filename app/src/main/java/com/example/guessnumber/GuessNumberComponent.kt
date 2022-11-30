@@ -36,7 +36,7 @@ fun Header() {
 @Composable
 fun Answer(viewModel: GuessNumberViewModel = koinViewModel()) {
     val answer by viewModel.answer.observeAsState(0)
-    Text(text = answer.toString(), fontWeight = FontWeight.W600)
+    Text(text = "Correct answer is $answer", fontWeight = FontWeight.W600)
 }
 
 @Composable
